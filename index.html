@@ -275,6 +275,36 @@ footer a:hover{color:var(--t0)}
   .contact-grid{padding:0 12px}
   body{font-size:14px}
 }
+
+/* ── INFO / SEO CONTENT ── */
+.info-section{max-width:860px;margin:0 auto;padding:36px 18px 56px;color:var(--t1);font-size:14px;line-height:1.75}
+.info-hero{text-align:center;padding:10px 8px 28px;border-bottom:1px solid var(--border);margin-bottom:30px}
+.info-hero h2{font-family:var(--fh);font-size:clamp(20px,3.4vw,32px);font-weight:900;letter-spacing:.3px;line-height:1.2;background:var(--grd-brand);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
+.info-hero p{color:var(--t1);max-width:620px;margin:0 auto;font-size:13.5px;line-height:1.7}
+.info-block{margin-bottom:30px}
+.info-block h3{font-family:var(--fh);font-size:15px;font-weight:800;color:var(--cyan);letter-spacing:.4px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.info-block h3::before{content:"";display:inline-block;width:4px;height:16px;border-radius:2px;background:var(--grd-brand);flex-shrink:0}
+.info-block p{color:var(--t1);margin-bottom:11px;font-size:13.5px;line-height:1.75}
+.info-block strong{color:var(--t0);font-weight:600}
+.info-list{list-style:none;padding:0;margin:6px 0 12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px}
+.info-list li{display:flex;align-items:flex-start;gap:9px;padding:9px 12px;background:rgba(255,255,255,0.025);border:1px solid var(--border);border-radius:var(--r12);font-size:12.5px;line-height:1.55;color:var(--t1)}
+.info-list li::before{content:"✦";color:var(--violet);font-size:13px;flex-shrink:0;margin-top:1px}
+.steps{counter-reset:step;list-style:none;padding:0;margin:6px 0 8px;display:grid;gap:8px}
+.steps li{counter-increment:step;display:flex;align-items:flex-start;gap:12px;padding:10px 14px;background:rgba(168,85,247,0.06);border:1px solid rgba(168,85,247,0.18);border-radius:var(--r12);font-size:13px;line-height:1.6;color:var(--t1)}
+.steps li::before{content:counter(step);flex-shrink:0;width:24px;height:24px;border-radius:50%;background:var(--grd-brand);color:#000;font-family:var(--fh);font-weight:900;font-size:12px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.faq{display:grid;gap:8px;margin:6px 0 0}
+.faq-item{padding:12px 14px;background:rgba(255,255,255,0.025);border:1px solid var(--border);border-radius:var(--r12);transition:var(--tf)}
+.faq-item:hover{border-color:rgba(168,85,247,0.35)}
+.faq-item h4{font-family:var(--fb);font-size:13px;font-weight:700;color:var(--cyan);margin-bottom:5px;letter-spacing:.2px}
+.faq-item p{color:var(--t1);font-size:13px;line-height:1.7;margin:0}
+.info-cta{margin-top:30px;padding:22px 20px;text-align:center;background:linear-gradient(135deg,rgba(168,85,247,0.12),rgba(24,245,200,0.08));border:1px solid rgba(168,85,247,0.35);border-radius:var(--r20)}
+.info-cta p{color:var(--t0);font-family:var(--fh);font-size:15px;font-weight:800;letter-spacing:.4px;margin-bottom:14px;line-height:1.5}
+.info-cta a,.info-cta button{display:inline-block;padding:11px 28px;border-radius:var(--rpill);font-family:var(--fh);font-size:12px;font-weight:900;letter-spacing:1.5px;background:var(--grd-brand);border:none;color:#000;cursor:pointer;text-decoration:none;box-shadow:0 0 30px rgba(168,85,247,0.45);transition:var(--tm)}
+.info-cta a:hover,.info-cta button:hover{transform:scale(1.04);box-shadow:0 0 50px rgba(168,85,247,0.6)}
+@media(max-width:680px){
+  .info-section{padding:24px 14px 40px}
+  .info-list{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
@@ -410,6 +440,99 @@ footer a:hover{color:var(--t0)}
       <div id="hist-list"></div>
     </div>
   </div>
+
+  <!-- ══════════════════ INFO / SEO CONTENT ══════════════════ -->
+  <section class="info-section" aria-label="About Touch to Music">
+
+    <div class="info-hero">
+      <h2>Touch to Music — A Free Virtual Instrument for Everyone</h2>
+      <p>Open the page, tap the canvas, and you're playing. No installs, no accounts, no learning curve.</p>
+    </div>
+
+    <div class="info-block">
+      <h3>What is Touch to Music?</h3>
+      <p>Touch to Music is a free, browser-based virtual instrument built by RDJ Publishers — designed so anyone can make music the moment inspiration strikes. Open the page, tap the screen, and you're playing a real instrument. Nothing to download, nothing to sign up for, nothing to configure.</p>
+      <p>You'll find <strong>20+ real instrument sounds</strong> ready to play: Piano, Guitar, Flute, Violin, Sitar, Trumpet, Drums, and more. Every note responds to touch — on a phone, a tablet, or a laptop. It's built for students, beginners, and casual music lovers who want to explore sound without buying expensive gear or downloading clunky apps. The whole tool runs in your browser, so it works on <strong>iOS, Android, Windows, macOS, and ChromeOS</strong> — anywhere a modern browser does.</p>
+    </div>
+
+    <div class="info-block">
+      <h3>How to Use Touch to Music</h3>
+      <p>Getting started takes about ten seconds. Here's the full flow:</p>
+      <ol class="steps">
+        <li><strong>Enable audio.</strong> Tap the audio button at the top of the page. Browsers require this gesture before any sound can play.</li>
+        <li><strong>Pick an instrument.</strong> Browse the instrument row — filter by Keyboard, Strings, Wind, Percussion, Synth, or World.</li>
+        <li><strong>Choose a scale.</strong> Cycle through major, minor, pentatonic, blues, and more to shape which notes the canvas responds to.</li>
+        <li><strong>Adjust effects.</strong> Slide the reverb, delay, brightness, sustain, and pitch knobs until it sounds like you.</li>
+        <li><strong>Start tapping.</strong> That's it — play freely, layer sounds, experiment with the visual effects.</li>
+      </ol>
+    </div>
+
+    <div class="info-block">
+      <h3>Main Features</h3>
+      <ul class="info-list">
+        <li><strong>20+ real instruments</strong> — Piano, Guitar, Flute, Violin, Sitar, Trumpet, Drums, and more across six categories.</li>
+        <li><strong>12 musical scales</strong> — Major, Minor, Pentatonic, Blues, Chromatic, and others to keep every jam in key.</li>
+        <li><strong>16 visual effects</strong> — Aurora, Pulse, Wave, and more, each reacting to the notes you play.</li>
+        <li><strong>Reverb and delay</strong> — Dial in depth, mix, and time for atmosphere and space.</li>
+        <li><strong>Built-in recorder</strong> — Capture your sessions and download them as audio files.</li>
+        <li><strong>Autoplay mode</strong> — Sit back and let the tool play itself for inspiration.</li>
+        <li><strong>Microphone input</strong> — Sing or play along with external audio sources.</li>
+        <li><strong>Fullscreen toggle</strong> — Hide the clutter and focus on the canvas.</li>
+        <li><strong>Touch + mouse support</strong> — Works equally well with fingers, styluses, and cursors.</li>
+        <li><strong>Responsive design</strong> — Adapts cleanly to phones, tablets, and desktops.</li>
+        <li><strong>Privacy-first</strong> — Everything runs locally; recordings stay in your browser.</li>
+        <li><strong>Recording history</strong> — Quickly replay or re-download any session you've saved.</li>
+      </ul>
+    </div>
+
+    <div class="info-block">
+      <h3>Tips for Better Playing</h3>
+      <ul class="info-list">
+        <li><strong>Start with the Piano.</strong> It's the most visual layout and helps you learn where notes sit on the canvas.</li>
+        <li><strong>Try a pentatonic scale first.</strong> Almost every combination sounds good — perfect for beginners exploring melody.</li>
+        <li><strong>Wear headphones.</strong> You'll catch reverb tails, delay echoes, and brightness details way more clearly.</li>
+        <li><strong>Don't fear the effects knobs.</strong> Small changes to reverb mix can completely reshape the mood of a session.</li>
+        <li><strong>Record every session.</strong> Even five-second clips are great for hearing how your playing is evolving.</li>
+      </ul>
+    </div>
+
+    <div class="info-block">
+      <h3>Why We Built a Free Music Tool</h3>
+      <p>We built Touch to Music because making music shouldn't require expensive apps, paywalls, or an account you forgot the password to. Good tools should feel open — like a piano in a public park. Anyone, anywhere, should be able to press a key and feel something. That's the whole point of Touch to Music: keep the door open, keep the price at zero, and let the music happen.</p>
+    </div>
+
+    <div class="info-block">
+      <h3>Frequently Asked Questions</h3>
+      <div class="faq">
+        <div class="faq-item">
+          <h4>Is Touch to Music really free?</h4>
+          <p>Yes — 100% free, with no hidden tiers, no trial limits, and no premium unlock. Just open the page and play.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do I need to download anything?</h4>
+          <p>Nope. Touch to Music runs entirely in your web browser. No installs, no plugins, no browser extensions required.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Does it work on iPhone and Android?</h4>
+          <p>Yes. It's tested on both iOS and Android browsers, plus all major desktop browsers including Chrome, Safari, Firefox, and Edge.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Can I record what I play?</h4>
+          <p>Absolutely. Hit the Record button, play, then download your session as an audio file from the recording history panel.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do I need a musical background to use it?</h4>
+          <p>Not at all. The built-in scales and visual guides make it friendly for total beginners — and interesting enough for experienced players to experiment with.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-cta">
+      <p>Ready when you are — enable audio, pick an instrument, and play your first note.</p>
+      <button onclick="initAudio();return false;">Enable Audio &amp; Play</button>
+    </div>
+
+  </section>
 
   </section>
 

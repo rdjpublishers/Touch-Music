@@ -241,9 +241,20 @@ body.fs .fs-hint{display:flex!important}
 .fmsg.err{background:rgba(244,63,94,0.12);border:1px solid rgba(244,63,94,0.3);color:#fda4af;display:block}
 
 /* ── FOOTER ── */
-footer{text-align:center;padding:24px 16px;border-top:1px solid var(--border);color:var(--t3);font-size:11px}
+footer{text-align:center;padding:22px 16px 24px;border-top:1px solid var(--border);color:var(--t3);font-size:11px}
 footer a{color:var(--t2);text-decoration:none;transition:var(--tf)}
 footer a:hover{color:var(--t0)}
+.footer-nav{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:6px 8px;margin-bottom:8px;row-gap:6px}
+.footer-nav a{color:var(--t1);font-weight:500}
+.footer-nav a.legal{color:var(--t1);font-weight:600;text-decoration:underline;text-decoration-color:var(--border2);text-underline-offset:2px}
+.footer-nav a:hover{color:var(--t0);text-decoration-color:currentColor}
+.footer-sep{color:var(--border2);user-select:none;font-weight:400}
+.footer-meta{margin-top:2px;font-size:11px;color:var(--t3)}
+.footer-meta a{color:var(--t1);font-weight:600;text-decoration:none}
+.footer-meta a:hover{color:var(--t0)}
+.footer-disclosure{margin:8px auto 0;max-width:520px;font-size:10px;color:var(--t3);opacity:.85;font-style:italic;line-height:1.5}
+.footer-disclosure a{color:var(--t1);font-style:normal;text-decoration:underline;text-decoration-color:var(--border2);text-underline-offset:2px}
+.footer-disclosure a:hover{color:var(--t0);text-decoration-color:currentColor}
 
 /* ── RESPONSIVE ── */
 @media(max-width:768px){
@@ -450,10 +461,25 @@ footer a:hover{color:var(--t0)}
 </section>
 
 <footer>
-  <p>© 2024 <a href="https://rdjpublishers.com/" target="_blank" rel="noopener">RDJ Publishers</a> – "Crafting Tools People Actually Use" &nbsp;·&nbsp;
-  <a href="#" onclick="showPage('home');return false;">Home</a> &nbsp;·&nbsp;
-  <a href="#" onclick="showPage('about');return false;">About</a> &nbsp;·&nbsp;
-  <a href="#" onclick="showPage('contact');return false;">Contact</a></p>
+  <nav class="footer-nav" aria-label="Legal and navigation">
+    <a href="https://rdjpublishers.com/about.html">About</a>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <a href="https://rdjpublishers.com/contact.html">Contact</a>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <a class="legal" href="https://rdjpublishers.com/privacy-policy.html">Privacy Policy</a>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <a class="legal" href="https://rdjpublishers.com/terms.html">Terms &amp; Conditions</a>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <a class="legal" href="https://rdjpublishers.com/disclaimer.html">Disclaimer</a>
+    <span class="footer-sep" aria-hidden="true">·</span>
+    <a href="https://rdjpublishers.com/sitemap.xml">Sitemap</a>
+  </nav>
+  <div class="footer-meta">
+    © 2026 <a href="https://rdjpublishers.com/" target="_blank" rel="noopener">RDJ Publishers</a> – "Crafting Tools People Actually Use"
+  </div>
+  <div class="footer-disclosure">
+    This site may display ads served by Google AdSense. See our <a href="https://rdjpublishers.com/privacy-policy.html">Privacy Policy</a> for details.
+  </div>
 </footer>
 
 <script>
